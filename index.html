@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Real-time nonverbal behavior pipeline for Reachy Mini.">
+  <meta name="keywords" content="human-robot interaction, non-verbal interaction, social robotics, turing test, emotion recognition, gesture recognition, multimodal perception">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Non-Verbal Human-Robot Interaction with Reachy Mini: A Real-Time Multimodal System and Turing Test Evaluation</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Non-Verbal Human-Robot Interaction with Reachy Mini: A Real-Time Multimodal System and Turing Test Evaluation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://github.com/quangminhdinh">Quang Minh Dinh</a><sup>*</sup>,</span>
+            <span class="author-block">
+              <a href="https://github.com/stella05925">Stella Lin</a><sup>*</sup>,</span>
+            <span class="author-block">
+              <a href="https://github.com/S-Gemmin">Gemmin Sugiura</a><sup>*</sup>,
+            </span>
+            <span class="author-block">
+              <a href="#">Bita Azari</a>,
+            </span>
+            <span class="author-block">
+              <a href="#">Yasaman Etesam</a>,
+            </span>
+            <span class="author-block">
+              <a href="#">Chuxuan Zhang</a>,
+            </span>
+            <span class="author-block">
+              <a href="#">Angelica Lim</a>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Simon Fraser University,</span>
+            <span class="author-block"><sup>*</sup>Equal contributions</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- <span class="link-block">
+                <a href="https://arxiv.org/abs/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/S-Gemmin/nonverbal-reachy"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Autonomous Code</span>
+                  </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/S-Gemmin/teleop"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Teleop Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://canva.link/n3kgd0eqzafqzjw"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-chalkboard"></i>
+                  </span>
+                  <span>Poster</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div style="text-align: center;">
+          <img src="./static/results/reachy.webp" style="max-width: 100%; height: auto;" alt="Pipeline" />
+        </div>  
+      <h2 class="subtitle has-text-centered">
+        System overview of the multimodal non-verbal interaction pipeline. 
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Non-verbal interaction is a fundamental component of natural human communication, yet in human-robot interaction it remains underexplored relative to language-centric approaches. We present a real-time non-verbal interaction system for Reachy Mini, a compact humanoid robot, that perceives and autonomously responds to human emotion and body motion.
+          </p>
+          <p>
+            The system operates through four concurrent layers. First, a continuous mirroring layer tracks head orientation and arm elevation in real time, animating the robot's head and antennas to maintain social presence as a default background behaviour. Second, a hand gesture recognition layer maps discrete hand signs directly to emotional responses. Third, an action detection module segments continuous pose streams into discrete gesture clips; each clip is processed by a body motion captioning module and a facial emotion recognition module, whose outputs are jointly forwarded to a locally-hosted large language model that selects the most appropriate response from a library of 81 pre-recorded emotional expressions. Fourth, a priority scheduler arbitrates between all three reactive channels, ensuring coherent robot behaviour. The system runs fully offline on consumer hardware.
+          </p>
+          <p>
+            To support evaluation, we develop a teleoperation interface allowing a human operator to drive Reachy Mini's behaviors. We then conduct a Turing test-style user study in which participants freely interact with Reachy Mini using natural gestures and expressions, while the robot responds either autonomously or via teleoperation. Participants judge which condition they experienced and rate the naturalness of the robot's responses.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src=""
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered">Results</h2>
+
+        <h3 class="title is-5 has-text-centered">Sample Participant Interactions During the Pilot Study</h3>
+        <div style="text-align: center;">
+          <img src="./static/results/participant_interactions.jpg" style="max-width: 100%; height: auto;" alt="Participant interactions" />
+        </div>
+        <p>
+          Top row, left to right: a participant performing a two-handed gesture triggering action detection (V2); leaning to the side with head tracking active (V2); a teleoperator controlling the robot with one hand (V2). Bottom row: a participant using a finger-point gesture for hand gesture recognition (V3); raising one hand while the mirroring layer tracks arm elevation (V2); exhibiting a frown expression detected by the facial emotion recognition module (V3).
+        </p>
+
+      </div>
+    </div>
+    <!--/ Animation. -->
+
+    <!-- Turing Table. -->
+    <div class="columns is-centered" style="margin-top: 5rem;">
+      <div class="column is-four-fifths">
+        <h3 class="title is-5 has-text-centered">Turing Test Prediction Accuracy by Condition and Pipeline</h3>
+        <table class="table is-bordered is-striped is-hoverable is-fullwidth" style="text-align: center;">
+          <thead>
+            <tr>
+              <th style="text-align: left;">Pipeline</th>
+              <th style="text-align: left;">Condition</th>
+              <th>Correct</th>
+              <th>Total</th>
+              <th>Accuracy</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align: left;">V2</td>
+              <td style="text-align: left;">Autonomous</td>
+              <td>4</td><td>5</td><td>80%</td>
+            </tr>
+            <tr>
+              <td style="text-align: left;">V2</td>
+              <td style="text-align: left;">Teleoperated</td>
+              <td>1</td><td>4</td><td>25%</td>
+            </tr>
+            <tr>
+              <td style="text-align: left;">V3</td>
+              <td style="text-align: left;">Autonomous</td>
+              <td>2</td><td>5</td><td>40%</td>
+            </tr>
+            <tr>
+              <td style="text-align: left;">V3</td>
+              <td style="text-align: left;">Teleoperated</td>
+              <td>1</td><td>7</td><td>14%</td>
+            </tr>
+            <tr style="border-top: 2px solid #dbdbdb">
+              <td style="text-align: left;">V2 + V3</td>
+              <td style="text-align: left;">Autonomous</td>
+              <td>6</td><td>10</td><td>60%</td>
+            </tr>
+            <tr>
+              <td style="text-align: left;">V2 + V3</td>
+              <td style="text-align: left;">Teleoperated</td>
+              <td>2</td><td>11</td><td>18%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!--/ Turing Table. -->
+
+    <div class="columns is-centered" style="margin-top: 2rem;">
+      <div class="column is-four-fifths">
+        <h3 class="title is-5 has-text-centered">Turing Test Prediction Accuracy by Condition</h3>
+        <div style="text-align: center;">
+          <img src="./static/results/turing.png" style="max-width: 70%; height: auto;" alt="Turing results" />
+        </div>        
+        <p>
+            Participants in the
+            Teleoperated condition identified the correct control mode at only 18%
+            (2/11), well below the 50% chance baseline, indicating a strong
+            autonomy-assumption bias. Participants in the Autonomous condition performed
+            closer to chance at 60% (6/10).
+        </p>
+      </div>
+    </div>
+
+    <!-- Godspeed Table. -->
+    <div class="columns is-centered" style="margin-top: 5rem;">
+      <div class="column is-four-fifths">
+        <h3 class="title is-5 has-text-centered">Mean Godspeed Subscale Scores by Condition (1&ndash;5 scale)</h3>
+        <table class="table is-bordered is-striped is-hoverable is-fullwidth" style="text-align: center;">
+          <thead>
+            <tr>
+              <th style="text-align: left;">Condition</th>
+              <th>Anthropomorphism</th>
+              <th>Animacy</th>
+              <th>Likeability</th>
+              <th>Intelligence</th>
+              <th>Safety</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align: left;">Autonomous</td>
+              <td>2.72</td>
+              <td>3.22</td>
+              <td>3.96</td>
+              <td>3.08</td>
+              <td>3.00</td>
+            </tr>
+            <tr>
+              <td style="text-align: left;">Teleoperated</td>
+              <td>3.35</td>
+              <td>3.59</td>
+              <td>4.38</td>
+              <td>3.33</td>
+              <td>3.30</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!--/ Godspeed Table. -->
+
+    <div class="columns is-centered" style="margin-top: 2rem;">
+      <div class="column is-four-fifths">
+        <h3 class="title is-5 has-text-centered">Mean Godspeed Subscale Scores by Condition</h3>
+        <div style="text-align: center;">
+          <img src="./static/results/godspeed.png" style="max-width: 70%; height: auto;" alt="Godspeed results" />
+        </div>        
+        <p>
+            Bars show condition
+            means; overlaid points show individual observations (N=21). Teleoperated
+            interactions received higher scores across all subscales except Perceived
+            Safety, though differences should be interpreted as descriptive trends
+            given the pilot study sample size.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- <section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{park2021nerfies,
+  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
+  title     = {Nerfies: Deformable Neural Radiance Fields},
+  journal   = {ICCV},
+  year      = {2021},
+}</code></pre>
+  </div>
+</section> -->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <!-- <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled> -->
+        <!-- <i class="fab fa-github"></i> -->
+      <!-- </a> -->
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            We thank the authors of <a href="https://nerfies.github.io/">Nerfies</a> that kindly open sourced the template of this website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
