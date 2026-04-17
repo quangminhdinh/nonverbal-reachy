@@ -151,13 +151,13 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Non-verbal interaction is fundamental to human communication, yet remains underexplored in human-robot interaction relative to language-centric approaches. We present a real-time non-verbal interaction system for Reachy Mini, a compact humanoid robot, that perceives and autonomously responds to human gesture, motion, and affect.
+            Non-verbal cues such as gesture, posture, and facial expression are central to human communication, yet remain largely unaddressed in social robotics. Existing HRI systems either rely on language or require cloud inference, limiting real-time, expressive non-verbal response. We present a fully offline, real-time non-verbal interaction system for Reachy Mini, a compact humanoid robot, that perceives and autonomously responds to human body motion and emotion.
           </p>
           <p>
-            The system operates through four concurrent layers: a continuous mirroring layer that dynamically tracks either head orientation or hand motion depending on which is active, animating the robot's head and antennas to maintain social presence; a hand gesture recognition layer that maps discrete signs directly to emotional responses; a facial emotion recognition layer that reacts to the participant's affective state; and an action detection module that segments pose streams into discrete clips, each forwarded to a locally-hosted Vision Language Model that selects an appropriate response from a library of 81 pre-recorded expressions. All components run fully offline on consumer hardware.
+            Our system combines continuous head and arm mirroring, hand gesture recognition, facial emotion detection, and a locally-hosted Vision Language Model (VLM) that selects from a library of 81 pre-recorded expressions, coordinated by a priority scheduler across four concurrent perception layers.
           </p>
           <p>
-            To support evaluation, we develop a web-based teleoperation interface as a human-controlled baseline. We conduct a Turing test-style pilot study (N=17) in which participants interact with Reachy Mini under either autonomous or teleoperated control, then judge which condition they experienced and complete the Godspeed questionnaire. Overall identification accuracy fell below chance (38%), with teleoperated behaviour correctly identified only 18% of the time, suggesting the autonomous system produces socially convincing non-verbal behaviour.
+            Running entirely on consumer hardware with 3s end-to-end latency, the system produces behaviour convincing enough that participants in a Turing test-style study could not reliably distinguish it from human teleoperation (38% overall accuracy, below the 50% chance baseline). These results suggest that lightweight, offline multimodal perception is sufficient to produce socially credible non-verbal robot behaviour, opening a path toward accessible and deployable social HRI systems.
           </p>
         </div>
       </div>
